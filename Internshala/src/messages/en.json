@@ -1,0 +1,69 @@
+{
+  
+  "navbar": {
+    "internships": "Internships",
+    "jobs": "Jobs",
+    "search": "Search opportunities...",
+    "applications": "My Applications",
+    "logout": "Logout",
+    "continue": "Continue with Google",
+    "admin": "Admin"
+  
+},
+ "otp": {
+    "title": "Verification Required",
+    "description": "Verify your email before changing the language.",
+    "email": "Enter your email",
+    "enterOtp": "Enter OTP",
+    "send": "Send OTP",
+    "sending": "Sending...",
+    "verify": "Verify OTP",
+    "cancel": "Cancel",
+    "sent": "OTP sent to your email",
+    "changed": "Language changed successfully",
+    "enterEmail": "Please enter your email",
+    "enterOtpError": "Please enter the OTP"
+  },
+"home": {
+  "heroTitle": "Make your dream career a reality",
+  "heroSubtitle": "Trending on InternArea 🔥",
+
+  "slide1": "Start Your Career Journey",
+  "slide2": "Learn From The Best",
+  "slide3": "Grow Your Skills",
+  "slide4": "Connect With Top Companies",
+
+
+    "latestInternships": "Latest Internships on InternArea",
+
+  "categories": {
+    "bigBrands": "Big Brands",
+    "workFromHome": "Work From Home",
+    "partTime": "Part-time",
+    "mba": "MBA",
+    "engineering": "Engineering",
+    "media": "Media",
+    "design": "Design",
+    "dataScience": "Data Science"
+  }
+},
+"internship": {
+  "filters": "Filters",
+  "clearAll": "Clear all",
+  "category": "Category",
+  "categoryPlaceholder": "e.g. Marketing Intern",
+  "location": "Location",
+  "locationPlaceholder": "e.g. Mumbai",
+  "workFromHome": "Work from home",
+  "partTime": "Part-time",
+  "monthlyStipend": "Monthly Stipend (₹)",
+  "showFilters": "Show Filters",
+  "found": "Internships found",
+  "activelyHiring": "Actively Hiring",
+  "startDate": "Start Date",
+  "stipend": "Stipend",
+  "postedRecently": "Posted recently",
+  "viewDetails": "View Details",
+  "internship": "Internship"
+}
+}

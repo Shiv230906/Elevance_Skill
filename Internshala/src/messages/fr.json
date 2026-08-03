@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "internships": "Stages",
+    "jobs": "Emplois",
+    "search": "Rechercher des opportunités...",
+    "applications": "Mes candidatures",
+    "logout": "Déconnexion",
+    "continue": "Continuer avec Google",
+    "admin": "Administrateur"
+  },
+  "otp": {
+    "title": "Vérification requise",
+    "description": "Vérifiez votre e-mail avant de changer de langue.",
+    "email": "Entrez votre e-mail",
+    "enterOtp": "Entrez le code OTP",
+    "send": "Envoyer le code OTP",
+    "sending": "Envoi...",
+    "verify": "Vérifier le code OTP",
+    "cancel": "Annuler",
+    "sent": "Code OTP envoyé à votre e-mail",
+    "changed": "Langue changée avec succès",
+    "enterEmail": "Veuillez entrer votre e-mail",
+    "enterOtpError": "Veuillez entrer le code OTP"
+  },
+  "home": {
+    "heroTitle": "Réalisez la carrière de vos rêves",
+    "heroSubtitle": "Tendances sur InternArea 🔥",
+    "slide1": "Commencez votre carrière",
+    "slide2": "Apprenez des meilleurs",
+    "slide3": "Développez vos compétences",
+    "slide4": "Connectez-vous avec les meilleures entreprises",
+    "latestInternships": "Derniers stages sur InternArea",
+    "categories": {
+      "bigBrands": "Grandes marques",
+      "workFromHome": "Télétravail",
+      "partTime": "Temps partiel",
+      "mba": "MBA",
+      "engineering": "Ingénierie",
+      "media": "Médias",
+      "design": "Design",
+      "dataScience": "Science des données"
+    }
+  },
+  "internship": {
+  "filters": "Filtres",
+  "clearAll": "Tout effacer",
+  "category": "Catégorie",
+  "categoryPlaceholder": "Ex. Stage en marketing",
+  "location": "Lieu",
+  "locationPlaceholder": "Ex. Mumbai",
+  "workFromHome": "Télétravail",
+  "partTime": "Temps partiel",
+  "monthlyStipend": "Indemnité mensuelle (₹)",
+  "showFilters": "Afficher les filtres",
+  "found": "Stages trouvés",
+  "activelyHiring": "Recrutement en cours",
+  "startDate": "Date de début",
+  "stipend": "Indemnité",
+  "postedRecently": "Publié récemment",
+  "viewDetails": "Voir les détails",
+  "internship": "Stage"
+}
+}

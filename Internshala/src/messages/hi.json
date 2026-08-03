@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "internships": "इंटर्नशिप",
+    "jobs": "नौकरियाँ",
+    "search": "अवसर खोजें...",
+    "applications": "मेरे आवेदन",
+    "logout": "लॉग आउट",
+    "login": "Google से जारी रखें",
+    "admin": "एडमिन"
+  },
+  "otp": {
+    "title": "सत्यापन आवश्यक",
+    "description": "भाषा बदलने से पहले अपना ईमेल सत्यापित करें।",
+    "email": "अपना ईमेल दर्ज करें",
+    "enterOtp": "ओटीपी दर्ज करें",
+    "send": "ओटीपी भेजें",
+    "sending": "भेजा जा रहा है...",
+    "verify": "ओटीपी सत्यापित करें",
+    "cancel": "रद्द करें",
+    "sent": "ओटीपी आपके ईमेल पर भेज दिया गया है",
+    "changed": "भाषा सफलतापूर्वक बदल दी गई",
+    "enterEmail": "कृपया अपना ईमेल दर्ज करें",
+    "enterOtpError": "कृपया ओटीपी दर्ज करें"
+  },
+  "home": {
+    "heroTitle": "अपने सपनों के करियर को साकार करें",
+    "heroSubtitle": "InternArea पर ट्रेंडिंग 🔥",
+
+    "slide1": "अपने करियर की यात्रा शुरू करें",
+    "slide2": "श्रेष्ठ लोगों से सीखें",
+    "slide3": "अपने कौशल को बढ़ाएँ",
+    "slide4": "शीर्ष कंपनियों से जुड़ें",
+
+
+    "latestInternships": "InternArea पर नवीनतम इंटर्नशिप",
+
+    "categories": {
+      "bigBrands": "बड़ी कंपनियाँ",
+      "workFromHome": "घर से काम",
+      "partTime": "पार्ट-टाइम",
+      "mba": "एमबीए",
+      "engineering": "इंजीनियरिंग",
+      "media": "मीडिया",
+      "design": "डिज़ाइन",
+      "dataScience": "डेटा साइंस"
+    }
+    
+  },
+  "internship": {
+  "filters": "फ़िल्टर",
+  "clearAll": "सभी हटाएँ",
+  "category": "श्रेणी",
+  "categoryPlaceholder": "उदा. मार्केटिंग इंटर्न",
+  "location": "स्थान",
+  "locationPlaceholder": "उदा. मुंबई",
+  "workFromHome": "घर से काम",
+  "partTime": "पार्ट-टाइम",
+  "monthlyStipend": "मासिक स्टाइपेंड (₹)",
+  "showFilters": "फ़िल्टर दिखाएँ",
+  "found": "इंटर्नशिप मिलीं",
+  "activelyHiring": "सक्रिय रूप से भर्ती",
+  "startDate": "प्रारंभ तिथि",
+  "stipend": "स्टाइपेंड",
+  "postedRecently": "हाल ही में पोस्ट किया गया",
+  "viewDetails": "विवरण देखें",
+  "internship": "इंटर्नशिप"
+}
+}

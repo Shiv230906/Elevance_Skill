@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
 import {
   ArrowUpRight,
   Banknote,
@@ -15,94 +16,37 @@ import Link from "next/link";
 import axios from "axios";
 
 export default function SvgSlider() {
+  const { t } = useTranslation();
   const categories = [
-    "Big Brands",
-    "Work From Home",
-    "Part-time",
-    "MBA",
-    "Engineering",
-    "Media",
-    "Design",
-    "Data Science",
-  ];
-  // const internships = [
-  //   {
-  //     _id: "1",
-  //     title: "Software Engineering Intern",
-  //     company: "Google",
-  //     location: "Remote",
-  //     stipend: "$1,500/month",
-  //     duration: "3 months",
-  //     category: "Engineering",
-  //   },
-  //   {
-  //     _id: "2",
-  //     title: "Marketing Intern",
-  //     company: "Meta",
-  //     location: "New York",
-  //     stipend: "$1,200/month",
-  //     duration: "6 months",
-  //     category: "Media",
-  //   },
-  //   {
-  //     _id: "3",
-  //     title: "Graphic Design Intern",
-  //     company: "Adobe",
-  //     location: "San Francisco",
-  //     stipend: "$1,000/month",
-  //     duration: "4 months",
-  //     category: "Design",
-  //   },
-  // ];
-
-  // const jobs = [
-  //   {
-  //     _id: "101",
-  //     title: "Frontend Developer",
-  //     company: "Amazon",
-  //     location: "Seattle",
-  //     CTC: "$100K/year",
-  //     Experience: "2+ years",
-  //     category: "Engineering",
-  //   },
-  //   {
-  //     _id: "102",
-  //     title: "Data Analyst",
-  //     company: "Microsoft",
-  //     location: "Remote",
-  //     CTC: "$90K/year",
-  //     Experience: "1+ years",
-  //     category: "Data Science",
-  //   },
-  //   {
-  //     _id: "103",
-  //     title: "UX Designer",
-  //     company: "Apple",
-  //     location: "California",
-  //     CTC: "$110K/year",
-  //     Experience: "3+ years",
-  //     category: "Design",
-  //   },
-  // ];
+  t("home.categories.bigBrands"),
+  t("home.categories.workFromHome"),
+  t("home.categories.partTime"),
+  t("home.categories.mba"),
+  t("home.categories.engineering"),
+  t("home.categories.media"),
+  t("home.categories.design"),
+  t("home.categories.dataScience"),
+];
+ 
   const slides = [
     {
       pattern: "pattern-1",
-      title: "Start Your Career Journey",
+      title: t("home.slide1"),
       bgColor: "bg-indigo-600",
     },
     {
       pattern: "pattern-2",
-      title: "Learn From The Best",
+      title: t("home.slide2"),
       bgColor: "bg-blue-600",
     },
     {
       pattern: "pattern-3",
-      title: "Grow Your Skills",
+      title: t("home.slide3"),
       bgColor: "bg-purple-600",
     },
     {
       pattern: "pattern-4",
-      title: "Connect With Top Companies",
+      title: t("home.slide4"),
       bgColor: "bg-teal-600",
     },
   ];
@@ -150,9 +94,12 @@ export default function SvgSlider() {
       {/* hero section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Make your dream career a reality
-        </h1>
-        <p className="text-xl text-gray-600">Trending on InternArea 🔥</p>
+  {t("home.heroTitle")}
+</h1>
+
+<p className="text-xl text-gray-600">
+  {t("home.heroSubtitle")}
+</p>
       </div>
       {/* Swiper section */}
       <div className="mb-16">
@@ -251,9 +198,7 @@ export default function SvgSlider() {
       </div>
       {/* Category section */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Latest internships on Intern Area
-        </h2>
+        <h2>{t("home.latestInternships")}</h2>
         <div className="flex flex-wrap gap-4">
           <span className="text-gray-700 font-medium">POPULAR CATEGORIES:</span>
           {categories.map((category) => (

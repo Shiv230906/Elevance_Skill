@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "internships": "Prácticas",
+    "jobs": "Empleos",
+    "search": "Buscar oportunidades...",
+    "applications": "Mis solicitudes",
+    "logout": "Cerrar sesión",
+    "continue": "Continuar con Google",
+    "admin": "Administrador"
+  },
+  "otp": {
+    "title": "Verificación requerida",
+    "description": "Verifica tu correo electrónico antes de cambiar el idioma.",
+    "email": "Introduce tu correo electrónico",
+    "enterOtp": "Introduce el OTP",
+    "send": "Enviar OTP",
+    "sending": "Enviando...",
+    "verify": "Verificar OTP",
+    "cancel": "Cancelar",
+    "sent": "OTP enviado a tu correo electrónico",
+    "changed": "Idioma cambiado correctamente",
+    "enterEmail": "Por favor, introduce tu correo electrónico",
+    "enterOtpError": "Por favor, introduce el OTP"
+  },
+  "home": {
+    "heroTitle": "Haz realidad la carrera de tus sueños",
+    "heroSubtitle": "Tendencias en InternArea 🔥",
+    "slide1": "Comienza tu carrera profesional",
+    "slide2": "Aprende de los mejores",
+    "slide3": "Desarrolla tus habilidades",
+    "slide4": "Conéctate con las mejores empresas",
+    "latestInternships": "Últimas prácticas en InternArea",
+    "categories": {
+      "bigBrands": "Grandes marcas",
+      "workFromHome": "Trabajo desde casa",
+      "partTime": "Medio tiempo",
+      "mba": "MBA",
+      "engineering": "Ingeniería",
+      "media": "Medios",
+      "design": "Diseño",
+      "dataScience": "Ciencia de datos"
+    }
+  },
+  "internship": {
+  "filters": "Filtros",
+  "clearAll": "Borrar todo",
+  "category": "Categoría",
+  "categoryPlaceholder": "Ej. Prácticas de Marketing",
+  "location": "Ubicación",
+  "locationPlaceholder": "Ej. Mumbai",
+  "workFromHome": "Trabajo desde casa",
+  "partTime": "Medio tiempo",
+  "monthlyStipend": "Estipendio mensual (₹)",
+  "showFilters": "Mostrar filtros",
+  "found": "Prácticas encontradas",
+  "activelyHiring": "Contratando activamente",
+  "startDate": "Fecha de inicio",
+  "stipend": "Estipendio",
+  "postedRecently": "Publicado recientemente",
+  "viewDetails": "Ver detalles",
+  "internship": "Prácticas"
+}
+}

@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "internships": "Estágios",
+    "jobs": "Empregos",
+    "search": "Pesquisar oportunidades...",
+    "applications": "Minhas candidaturas",
+    "logout": "Sair",
+    "continue": "Continuar com o Google",
+    "admin": "Administrador"
+  },
+  "otp": {
+    "title": "Verificação necessária",
+    "description": "Verifique seu e-mail antes de alterar o idioma.",
+    "email": "Digite seu e-mail",
+    "enterOtp": "Digite o OTP",
+    "send": "Enviar OTP",
+    "sending": "Enviando...",
+    "verify": "Verificar OTP",
+    "cancel": "Cancelar",
+    "sent": "OTP enviado para seu e-mail",
+    "changed": "Idioma alterado com sucesso",
+    "enterEmail": "Digite seu e-mail",
+    "enterOtpError": "Digite o OTP"
+  },
+  "home": {
+    "heroTitle": "Transforme a carreira dos seus sonhos em realidade",
+    "heroSubtitle": "Em alta na InternArea 🔥",
+    "slide1": "Comece sua jornada profissional",
+    "slide2": "Aprenda com os melhores",
+    "slide3": "Desenvolva suas habilidades",
+    "slide4": "Conecte-se com as melhores empresas",
+    "latestInternships": "Últimos estágios na InternArea",
+    "categories": {
+      "bigBrands": "Grandes marcas",
+      "workFromHome": "Trabalho remoto",
+      "partTime": "Meio período",
+      "mba": "MBA",
+      "engineering": "Engenharia",
+      "media": "Mídia",
+      "design": "Design",
+      "dataScience": "Ciência de Dados"
+    }
+  },
+  "internship": {
+  "filters": "Filtros",
+  "clearAll": "Limpar tudo",
+  "category": "Categoria",
+  "categoryPlaceholder": "Ex.: Estágio em Marketing",
+  "location": "Localização",
+  "locationPlaceholder": "Ex.: Mumbai",
+  "workFromHome": "Trabalho remoto",
+  "partTime": "Meio período",
+  "monthlyStipend": "Bolsa mensal (₹)",
+  "showFilters": "Mostrar filtros",
+  "found": "Estágios encontrados",
+  "activelyHiring": "Contratação ativa",
+  "startDate": "Data de início",
+  "stipend": "Bolsa",
+  "postedRecently": "Publicado recentemente",
+  "viewDetails": "Ver detalhes",
+  "internship": "Estágio"
+}
+}

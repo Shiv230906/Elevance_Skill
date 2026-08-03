@@ -1,4 +1,4 @@
-import React from "react";
+
 import Link from "next/link";
 import { auth, googleProvider } from "../firebase/firebase";
 import { Search } from "lucide-react";
@@ -6,10 +6,14 @@ import { signInWithPopup, signInWithRedirect, signOut } from "firebase/auth";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectuser } from "@/feature/userSlice";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Navbar = () => {
   const user = useSelector(selectuser);
   const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
 
   const handlelogin = async () => {
     try {
@@ -43,7 +47,11 @@ const Navbar = () => {
               "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=faces",
           })
         );
-        toast.info("Logged in as Demo User (Firebase domain unauthorized on localhost)");
+        if (error?.code === "auth/unauthorized-domain") {
+          toast.warn("Add your Vercel domain to Firebase Console -> Authorized Domains to enable Google Login. Logged in as Demo User.");
+        } else {
+          toast.info("Logged in as Demo User");
+        }
         return;
       }
 
@@ -57,6 +65,24 @@ const Navbar = () => {
     toast.info("Logged out successfully");
   };
 
+
+
+
+  const handleLanguageChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const selected = e.target.value;
+
+    setSelectedLanguage(selected);
+    setShowOtpModal(true);
+  };
+
+  const [showOtpModal, setShowOtpModal] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpLoading, setOtpLoading] = useState(false);
   return (
     <div className="relative">
       <nav className="bg-white shadow-md">
@@ -64,33 +90,44 @@ const Navbar = () => {
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="text-xl font-bold text-blue-600">
-                <img src={"/logo.png"} alt="Logo" className="h-16" />
-              </a>
+              <Link href="/" className="text-xl font-bold text-blue-600">
+                <img src="/logo.png" alt="Logo" className="h-16" />
+              </Link>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden md:flex items-center space-x-8">
               <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
                 <Link href={"/internships"}>
-                  <span>Internships</span>
+                  <span>{t("navbar.internships")}</span>
                 </Link>
               </button>
               <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
                 <Link href={"/job"}>
-                  <span>Jobs</span>
+                  <span>{t("navbar.jobs")}</span>
                 </Link>
               </button>
               <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
                 <Search size={16} className="text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search opportunities..."
+                  placeholder={t("navbar.search")}
                   className="ml-2 bg-transparent focus:outline-none text-sm w-48 text-black"
                 />
               </div>
             </div>
-
+            <select
+              value={i18n.language}
+              onChange={handleLanguageChange}
+              className="border rounded-lg px-2 py-1 text-sm text-black"
+            >
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="hi">Hindi</option>
+              <option value="pt">Portuguese</option>
+              <option value="zh">Chinese</option>
+              <option value="fr">French</option>
+            </select>
             {/* Auth Buttons */}
             <div className="flex items-center space-x-4">
               {user ? (
@@ -99,7 +136,7 @@ const Navbar = () => {
                     href="/viewapplication"
                     className="text-sm font-medium text-gray-700 hover:text-blue-600 mr-2"
                   >
-                    My Applications
+                    {t("navbar.applications")}
                   </Link>
                   <Link href={"/profile"}>
                     <img
@@ -115,7 +152,7 @@ const Navbar = () => {
                     className="flex items-center px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg border border-gray-200"
                     onClick={handlelogout}
                   >
-                    Logout
+                    {t("navbar.logout")}
                   </button>
                 </div>
               ) : (
@@ -142,13 +179,13 @@ const Navbar = () => {
                         d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                       />
                     </svg>
-                    <span>Continue with Google</span>
+                    <span>{t("navbar.continue")}</span>
                   </button>
                   <a
                     href="/adminlogin"
                     className="text-gray-600 hover:text-gray-800 text-sm font-medium"
                   >
-                    Admin
+                    {t("navbar.admin")}
                   </a>
                 </>
               )}
@@ -156,6 +193,140 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* OTP MODAL */}
+      {showOtpModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 w-96 shadow-xl">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              {t("otp.title")}
+            </h2>
+
+            <p className="text-sm text-gray-600 mb-4">
+              {t("otp.description")}
+            </p>
+
+            <input
+              type="email"
+              placeholder={t("otp.email")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full border rounded-lg px-3 py-2 mb-3 text-black"
+            />
+
+            {!otpSent ? (
+              <button
+                onClick={async () => {
+                  if (!email) {
+                    toast.error(t("otp.enterEmail"));
+                    return;
+                  }
+
+                  setOtpLoading(true);
+
+                  try {
+                    const response = await fetch(
+                      "http://localhost:5000/api/otp/send",
+                      {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ email }),
+                      }
+                    );
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                      setOtpSent(true);
+                      toast.success(t("otp.sent"));
+                    } else {
+                      toast.error(data.message || "Failed to send OTP");
+                    }
+                  } catch (error) {
+                    console.error(error);
+                    toast.error("Unable to connect to backend");
+                  } finally {
+                    setOtpLoading(false);
+                  }
+                }}
+                className="w-full bg-blue-600 text-white rounded-lg py-2"
+              >
+                {otpLoading ? t("otp.sending") : t("otp.send")}
+              </button>
+            ) : (
+              <>
+                <input
+                  type="text"
+                  placeholder={t("otp.enterOtp")}
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  className="w-full border rounded-lg px-3 py-2 mb-3 text-black"
+                />
+
+                <button
+                  onClick={async () => {
+                    if (!otp) {
+                      toast.error(t("otp.enterOtpError"));
+                      return;
+                    }
+
+                    try {
+                      const response = await fetch(
+                        "http://localhost:5000/api/otp/verify",
+                        {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            email,
+                            otp,
+                          }),
+                        }
+                      );
+
+                      const data = await response.json();
+
+                      if (data.success) {
+                        await i18n.changeLanguage(selectedLanguage);
+
+                        setShowOtpModal(false);
+                        setOtpSent(false);
+                        setEmail("");
+                        setOtp("");
+
+                        toast.success(t("otp.changed"));
+                      } else {
+                        toast.error(data.message || "Invalid OTP");
+                      }
+                    } catch (error) {
+                      console.error(error);
+                      toast.error("Unable to verify OTP");
+                    }
+                  }}
+                  className="w-full bg-green-600 text-white rounded-lg py-2"
+                >
+                  {t("otp.verify")}
+                </button>
+              </>
+            )}
+
+            <button
+              onClick={() => {
+                setShowOtpModal(false);
+                setOtpSent(false);
+                setEmail("");
+                setOtp("");
+              }}
+              className="w-full mt-2 text-gray-600 py-2"
+            >
+              {t("otp.cancel")}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

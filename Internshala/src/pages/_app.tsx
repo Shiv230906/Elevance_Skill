@@ -11,6 +11,7 @@ import { auth } from "@/firebase/firebase";
 import { login, logout } from "@/feature/userSlice";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "@/translations/index";
 
 const AuthListener = () => {
   const dispatch = useDispatch();

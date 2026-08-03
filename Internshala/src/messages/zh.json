@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "internships": "实习",
+    "jobs": "工作",
+    "search": "搜索机会...",
+    "applications": "我的申请",
+    "logout": "退出登录",
+    "continue": "使用 Google 继续",
+    "admin": "管理员"
+  },
+  "otp": {
+    "title": "需要验证",
+    "description": "更改语言前请先验证您的电子邮件。",
+    "email": "输入您的电子邮件",
+    "enterOtp": "输入 OTP",
+    "send": "发送 OTP",
+    "sending": "发送中...",
+    "verify": "验证 OTP",
+    "cancel": "取消",
+    "sent": "OTP 已发送到您的邮箱",
+    "changed": "语言切换成功",
+    "enterEmail": "请输入您的电子邮件",
+    "enterOtpError": "请输入 OTP"
+  },
+  "home": {
+    "heroTitle": "让你的梦想职业成为现实",
+    "heroSubtitle": "InternArea 热门趋势 🔥",
+    "slide1": "开启你的职业旅程",
+    "slide2": "向优秀人才学习",
+    "slide3": "提升你的技能",
+    "slide4": "连接顶尖企业",
+    "latestInternships": "InternArea 最新实习机会",
+    "categories": {
+      "bigBrands": "知名品牌",
+      "workFromHome": "远程办公",
+      "partTime": "兼职",
+      "mba": "MBA",
+      "engineering": "工程",
+      "media": "媒体",
+      "design": "设计",
+      "dataScience": "数据科学"
+    }
+  },"internship": {
+  "filters": "筛选",
+  "clearAll": "清除全部",
+  "category": "类别",
+  "categoryPlaceholder": "例如：市场营销实习",
+  "location": "地点",
+  "locationPlaceholder": "例如：孟买",
+  "workFromHome": "居家办公",
+  "partTime": "兼职",
+  "monthlyStipend": "每月津贴 (₹)",
+  "showFilters": "显示筛选",
+  "found": "个实习岗位",
+  "activelyHiring": "正在招聘",
+  "startDate": "开始日期",
+  "stipend": "津贴",
+  "postedRecently": "最近发布",
+  "viewDetails": "查看详情",
+  "internship": "实习"
+}
+}
